@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Concerts | Jovana Stosic Violin</title>
+    <link href="../styles/style.css" rel="stylesheet" />
+    <script src="https://kit.fontawesome.com/a328b1d1bc.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+  </head>
+  <body>
+    <section class="concerts fade-animation">
+      <div class="audio-ico"></div>
+      <div class="navbar-concerts">
+        <h1>JS</h1>
+        <nav>
+          <a href="./index.html" class="transition-all">Home</a>
+          <a href="./about.html" class="transition-all">About</a>
+          <a href="./media.html" class="transition-all">Media</a>
+          <a href="#" class="transition-all" style="border-bottom: 1px solid white; color: white">Concerts</a>
+          <a href="./contact.html" class="transition-all">Contact</a>
+        </nav>
+      </div>
+
+      <h1 class="concerts-header">Concerts</h1>
+
+      <div class="concert-wrapper">
+        <div id="concerts-box" class="concerts-box">
+          <!-- <div class="concert-card">
+              <div class="concert-time-place">
+                <p class="concert-time">21:00</p>
+                <div class="concert-line-1"></div>
+                <p class="concert-adress">Unter den Linden 7, 10117 Berlin, Germany</p>
+              </div>
+              <div class="concert-date">
+                <p class="concert-day-month">26. July</p>
+                <div class="concert-line-2"></div>
+                <p class="concert-year">2023</p>
+              </div>
+            </div> -->
+        </div>
+        <div class="concert-helper"></div>
+      </div>
+
+      <div class="social-icons" style="margin-top: auto">
+        <a href="https://www.youtube.com/@jovanastosicviolin">
+          <i class="fa-brands fa-youtube"></i>
+        </a>
+        <a href="https://www.instagram.com/jole_violin/?igshid=MjEwN2IyYWYwYw%3D%3D">
+          <i class="fa-brands fa-instagram"></i>
+        </a>
+        <a href="https://www.facebook.com/jovanastosic8">
+          <i class="fa-brands fa-facebook-f"></i>
+        </a>
+      </div>
+
+      <div class="hidden mobile-menu">
+        <div id="mobile-menu-tooltip-box" class="fade-animation mobile-menu-tooltip-box hidden">
+          <div id="mobile-menu-tooltip" class="mobile-menu-tooltip">
+            <div class="mobile-menu-vertical-line"></div>
+            <nav>
+              <a href="./index.html" class="transition-all">Home</a>
+              <a href="./about.html" class="transition-all">About</a>
+              <a href="./media.html" class="transition-all">Media</a>
+              <a href="#" class="transition-all" style="border-bottom: 1px solid white">Concerts</a>
+              <a href="./contact.html" class="transition-all">Contact</a>
+            </nav>
+            <div class="social-icons-mobile">
+              <a href="https://www.youtube.com/@jovanastosicviolin">
+                <i class="fa-brands fa-youtube"></i>
+              </a>
+              <a href="https://www.instagram.com/jole_violin/?igshid=MjEwN2IyYWYwYw%3D%3D">
+                <i class="fa-brands fa-instagram"></i>
+              </a>
+              <a href="https://www.facebook.com/jovanastosic8">
+                <i class="fa-brands fa-facebook-f"></i>
+              </a>
+            </div>
+            <div class="mobile-menu-vertical-line"></div>
+            <div id="mobile-menu-close" class="transition-all mobile-menu-close"><i class="fa-solid fa-arrow-right-from-bracket"></i></div>
+          </div>
+        </div>
+        <i id="mobile-menu-icon" class="fa-solid fa-ellipsis transition-all mobile-menu-icon"></i>
+      </div>
+    </section>
+  </body>
+
+  <script src="./script.js"></script>
+  <script src="./concerts.js"></script>
+</html>

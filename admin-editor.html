@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Admin Editor | Jovana Stosic Violin</title>
+    <link rel="stylesheet" href="./styles/style.css" />
+    <script src="https://kit.fontawesome.com/a328b1d1bc.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+  </head>
+
+  <style>
+    .navbar-home nav a:hover {
+      color: white;
+    }
+  </style>
+  <body>
+    <section class="admin-editor transition-all">
+      <div class="audio-ico"></div>
+      <div class="navbar-home">
+        <nav>
+          <a href="./index.html" class="transition-all">Home</a>
+          <a href="./about.html" class="transition-all">About</a>
+          <a href="./media.html" class="transition-all">Media</a>
+          <a href="./concerts.html" class="transition-all">Concerts</a>
+          <a href="./contact.html" class="transition-all">Contact</a>
+        </nav>
+      </div>
+
+      <h1>Admin Editor</h1>
+      <div class="editor-wrapper">
+        <div class="editor-helper">
+          <button id="add-concert" class="transition-all">Add New Concert</button>
+        </div>
+        <div class="editor-list">
+          <h2>List of published concerts</h2>
+          <div class="concerts-published" id="concerts-published">
+            <!-- <div class="published-box" id="published-box">
+              <p class="time-published">21:30</p>
+              <p class="adress-published">Adress New, Berlin</p>
+              <p class="date-published">July 25. 2002</p>
+              <i class="fa-solid fa-trash"></i>
+              <i class="fa-solid fa-pen-to-square"></i>
+            </div> -->
+          </div>
+        </div>
+      </div>
+
+      <div id="modal" class="inputs-modal transition-all">
+        <h1>New Concert Data</h1>
+        <div id="close-modal" class="close-modal transition-all"><i class="fa-solid fa-xmark"></i></div>
+        <div class="editor-form transition-all">
+          <div class="input-box">
+            <label for="address">Address</label>
+            <input type="text" name="adress" id="address" placeholder="Example Address 133a, Berlin" />
+          </div>
+          <div class="input-box">
+            <label for="time">Time</label>
+            <input type="text" name="time" id="time" placeholder="23:00" />
+          </div>
+          <div class="input-box">
+            <label for="month">Month</label>
+            <input type="text" name="month" id="month" placeholder="July" />
+          </div>
+          <div class="input-box">
+            <label for="day">Day</label>
+            <input type="text" name="day" id="day" placeholder="31." />
+          </div>
+          <div class="input-box">
+            <label for="year">Year</label>
+            <input type="text" name="year" id="year" placeholder="2023" />
+          </div>
+          <div class="input-box">
+            <label for="description">Description</label>
+            <textarea name="description" id="description" rows="10" placeholder="Description"></textarea>
+          </div>
+          <button class="transition-all" id="uploadConcert">Upload Concert</button>
+        </div>
+      </div>
+
+      <div id="modal-edit" class="inputs-modal-edit transition-all">
+        <h1>Edit Concert</h1>
+        <div id="close-modal-edit" class="close-modal transition-all"><i class="fa-solid fa-xmark"></i></div>
+        <div class="editor-form transition-all">
+          <div class="input-box">
+            <label for="address">Address</label>
+            <input type="text" name="adress" id="address-edit" placeholder="Example Address 133a, Berlin" />
+          </div>
+          <div class="input-box">
+            <label for="time">Time</label>
+            <input type="text" name="time" id="time-edit" placeholder="23:00" />
+          </div>
+          <div class="input-box">
+            <label for="month">Month</label>
+            <input type="text" name="month" id="month-edit" placeholder="July" />
+          </div>
+          <div class="input-box">
+            <label for="day">Day</label>
+            <input type="text" name="day" id="day-edit" placeholder="31." />
+          </div>
+          <div class="input-box">
+            <label for="year">Year</label>
+            <input type="text" name="year" id="year-edit" placeholder="2023" />
+          </div>
+          <div class="input-box">
+            <label for="description">Description</label>
+            <textarea name="description" id="description-edit" rows="10" placeholder="Description"></textarea>
+          </div>
+          <button class="transition-all" id="uploadConcertEdit">Update Changes</button>
+        </div>
+      </div>
+
+      <div class="hidden mobile-menu">
+        <div id="mobile-menu-tooltip-box" class="fade-animation mobile-menu-tooltip-box hidden">
+          <div id="mobile-menu-tooltip" class="mobile-menu-tooltip">
+            <div class="mobile-menu-vertical-line"></div>
+            <nav>
+              <a href="./index.html" class="transition-all">Home</a>
+              <a href="./about.html" class="transition-all">About</a>
+              <a href="./media.html" class="transition-all">Media</a>
+              <a href="./concerts.html" class="transition-all">Concerts</a>
+              <a href="./contact.html" class="transition-all">Contact</a>
+            </nav>
+            <div class="social-icons-mobile">
+              <a href="https://www.youtube.com/@jovanastosicviolin">
+                <i class="fa-brands fa-youtube"></i>
+              </a>
+              <a href="https://www.instagram.com/jole_violin/?igshid=MjEwN2IyYWYwYw%3D%3D">
+                <i class="fa-brands fa-instagram"></i>
+              </a>
+              <a href="https://www.facebook.com/jovanastosic8">
+                <i class="fa-brands fa-facebook-f"></i>
+              </a>
+            </div>
+            <div class="mobile-menu-vertical-line"></div>
+            <div id="mobile-menu-close" class="transition-all mobile-menu-close"><i class="fa-solid fa-arrow-right-from-bracket"></i></div>
+          </div>
+        </div>
+        <i id="mobile-menu-icon" class="fa-solid fa-ellipsis transition-all mobile-menu-icon"></i>
+      </div>
+    </section>
+
+    <!-- <script type="module">
+      
+    </script> -->
+
+    <script src="admin-editor.js" type="module"></script>
+    <script src="script.js"></script>
+  </body>
+</html>

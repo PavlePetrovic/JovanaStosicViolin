@@ -1,0 +1,103 @@
+.home {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-image: url("../assets/images/home-img-xl.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh;
+  width: 100%;
+}
+
+.home-header {
+  display: none;
+}
+
+.navbar-home {
+  font-family: "Poppins", "sans-serif";
+  margin-top: 24px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  padding-inline: 16px;
+  height: fit-content;
+  width: fit-content;
+
+  h1 {
+    font-size: 24px;
+    font-weight: 700;
+    color: $white;
+  }
+
+  nav {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    text-transform: uppercase;
+
+    a {
+      font-size: 16px;
+      font-weight: 200;
+      letter-spacing: 0.1em;
+      color: $white;
+      font-size: 16px;
+      text-decoration: none;
+      &:hover {
+        color: $mainGreen;
+        border-color: $mainGreen;
+      }
+    }
+  }
+}
+
+.home-vertical-line {
+  display: block;
+  margin-block: 48px;
+  height: 100%;
+  width: 1px;
+  background-color: $white;
+}
+
+.home-text {
+  text-align: center;
+
+  h3 {
+    font-family: "Bodoni Moda", "serif";
+    font-size: 18px;
+    font-weight: 400;
+    margin-bottom: -18px;
+    color: $white;
+  }
+
+  .h1-mobile {
+    display: none;
+  }
+
+  h1 {
+    font-family: "Poppins", "sans-serif";
+    font-size: 110px;
+    font-weight: 600;
+    height: fit-content;
+    text-transform: uppercase;
+    color: $white;
+  }
+
+  h2 {
+    font-family: "Bodoni Moda", "serif";
+    font-size: 24px;
+    font-weight: 400;
+    font-style: italic;
+    margin-top: -10px;
+    max-width: 630px;
+    text-align: center;
+    color: $white;
+    @include mxCenter;
+  }
+
+  .mobile-violinist {
+    display: none;
+  }
+}

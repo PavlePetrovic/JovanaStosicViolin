@@ -1,0 +1,112 @@
+@import "./fonts";
+@import "./variables";
+
+// Pages
+@import "./home-page";
+@import "./about-page";
+@import "./media-page";
+@import "./concerts-page";
+@import "./contact-page";
+@import "./admin";
+@import "./admin-editor";
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  -webkit-tap-highlight-color: transparent;
+}
+
+// Custom styles
+body {
+  animation: fadeInAnimation ease 0.2s;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+}
+
+.transition-all {
+  transition-property: all;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 150ms;
+}
+
+.hidden {
+  display: none;
+}
+
+.invisible {
+  visibility: hidden;
+}
+
+.audio-ico {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: auto;
+  z-index: 50;
+  top: 30px;
+  left: 0;
+  left: 30px;
+  height: 39px;
+  width: 39px;
+  cursor: pointer;
+  border-radius: 999px;
+  background-color: transparent;
+  border: 1px solid white;
+  font-size: 16px;
+
+  i {
+    color: white;
+  }
+}
+
+.mobile-menu {
+  display: none;
+}
+
+.social-icons {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 24px;
+
+  a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 999px;
+    background-color: $mainGreen;
+    height: 35px;
+    width: 35px;
+    text-decoration: none;
+    cursor: pointer;
+
+    i {
+      font-size: 20px;
+      color: $white;
+    }
+  }
+}
+
+// Animations
+@keyframes fadeInAnimation {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.fade-animation {
+  animation: fadeInAnimation ease 0.2s;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+}
+
+// Media queries
+@import "./xl-media";
+@import "./lg-media";
+@import "./md-media";
+@import "./sm-media";

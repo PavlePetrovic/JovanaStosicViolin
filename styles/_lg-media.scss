@@ -1,0 +1,46 @@
+@media only screen and (max-width: 1024px) {
+  .home-text {
+    h1 {
+      font-size: 90px;
+    }
+  }
+
+  .contact-wrapper {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    padding: 4px;
+
+    .helper {
+      display: none;
+    }
+
+    .form {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      width: 100%;
+      height: 100%;
+      gap: 20px;
+
+      h1 {
+        font-family: "Bodoni Moda", "serif";
+        font-size: 40px;
+        color: white;
+        font-weight: 400;
+      }
+
+      form {
+        align-items: center;
+        padding: 15px;
+
+        .send-email {
+          text-align: center;
+        }
+      }
+    }
+  }
+}

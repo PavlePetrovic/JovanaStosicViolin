@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Admin Login | Jovana Stosic Violin</title>
+    <link rel="stylesheet" href="./styles/style.css" />
+    <script src="https://kit.fontawesome.com/a328b1d1bc.js" crossorigin="anonymous"></script>
+  </head>
+  <body>
+    <section class="admin">
+      <div class="audio-ico"></div>
+      <h1>Admin Login</h1>
+      <div class="admin-form">
+        <input id="name" type="text" placeholder="Name" />
+        <input id="password" type="password" placeholder="Password" />
+      </div>
+      <button id="log-in">Log in</button>
+      <p id="error" class="error">Error</p>
+
+      <div class="hidden mobile-menu">
+        <div id="mobile-menu-tooltip-box" class="fade-animation mobile-menu-tooltip-box hidden">
+          <div id="mobile-menu-tooltip" class="mobile-menu-tooltip">
+            <div class="mobile-menu-vertical-line"></div>
+            <nav>
+              <a href="#" class="transition-all" style="border-bottom: 1px solid white">Home</a>
+              <a href="./about.html" class="transition-all">About</a>
+              <a href="./media.html" class="transition-all">Media</a>
+              <a href="./concerts.html" class="transition-all">Concerts</a>
+              <a href="./contact.html" class="transition-all">Contact</a>
+            </nav>
+            <div class="social-icons-mobile">
+              <a href="https://www.youtube.com/@jovanastosicviolin">
+                <i class="fa-brands fa-youtube"></i>
+              </a>
+              <a href="https://www.instagram.com/jole_violin/?igshid=MjEwN2IyYWYwYw%3D%3D">
+                <i class="fa-brands fa-instagram"></i>
+              </a>
+              <a href="https://www.facebook.com/jovanastosic8">
+                <i class="fa-brands fa-facebook-f"></i>
+              </a>
+            </div>
+            <div class="mobile-menu-vertical-line"></div>
+            <div id="mobile-menu-close" class="transition-all mobile-menu-close"><i class="fa-solid fa-arrow-right-from-bracket"></i></div>
+          </div>
+        </div>
+        <i id="mobile-menu-icon" class="fa-solid fa-ellipsis transition-all mobile-menu-icon"></i>
+      </div>
+    </section>
+  </body>
+
+  <script src="admin.js"></script>
+  <script src="script.js"></script>
+</html>

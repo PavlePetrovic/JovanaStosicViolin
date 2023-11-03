@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../styles/style.css" />
+    <script src="https://kit.fontawesome.com/a328b1d1bc.js" crossorigin="anonymous"></script>
+    <title>Media Videos Gallery | Jovana Stosic</title>
+  </head>
+  <body>
+    <section class="video-gallery-page">
+      <div class="audio-ico"></div>
+      <!-- Navigation -->
+      <div class="video-gallery-navbar">
+        <h1>JS</h1>
+        <nav>
+          <a href="./index.html" class="transition-all">Home</a>
+          <a href="./about.html" class="transition-all">About</a>
+          <a href="./media.html" class="transition-all" style="border-bottom: 1px solid #052b26; color: #052b26">Media</a>
+          <a href="./concerts.html" class="transition-all">Concerts</a>
+          <a href="./contact.html" class="transition-all">Contact</a>
+        </nav>
+      </div>
+
+      <h1 class="media-v-header">Videos</h1>
+
+      <div class="video-gallery-wrapper">
+        <div class="container">
+          <iframe src="https://www.youtube.com/embed/QpXCsGjuOe4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+        </div>
+        <div class="container">
+          <iframe src="https://www.youtube.com/embed/ZoXByiz_7Ok" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+        </div>
+        <div class="container">
+          <iframe src="https://www.youtube.com/embed/ZrHgNHVUbCg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+        </div>
+      </div>
+
+      <div class="hidden mobile-menu">
+        <div id="mobile-menu-tooltip-box" class="fade-animation mobile-menu-tooltip-box hidden">
+          <div id="mobile-menu-tooltip" class="mobile-menu-tooltip">
+            <div class="mobile-menu-vertical-line"></div>
+            <nav>
+              <a href="./index.html" class="transition-all">Home</a>
+              <a href="./about.html" class="transition-all">About</a>
+              <a href="./media.html" class="transition-all" style="border-bottom: 1px solid white">Media</a>
+              <a href="./concerts.html" class="transition-all">Concerts</a>
+              <a href="./contact.html" class="transition-all">Contact</a>
+            </nav>
+            <div class="social-icons-mobile">
+              <a href="https://www.youtube.com/@jovanastosicviolin">
+                <i class="fa-brands fa-youtube"></i>
+              </a>
+              <a href="https://www.instagram.com/jole_violin/?igshid=MjEwN2IyYWYwYw%3D%3D">
+                <i class="fa-brands fa-instagram"></i>
+              </a>
+              <a href="https://www.facebook.com/jovanastosic8">
+                <i class="fa-brands fa-facebook-f"></i>
+              </a>
+            </div>
+            <div class="mobile-menu-vertical-line"></div>
+            <div id="mobile-menu-close" class="transition-all mobile-menu-close"><i class="fa-solid fa-arrow-right-from-bracket"></i></div>
+          </div>
+        </div>
+        <i id="mobile-menu-icon" class="fa-solid fa-ellipsis transition-all mobile-menu-icon"></i>
+      </div>
+    </section>
+
+    <script src="../script.js"></script>
+  </body>
+</html>

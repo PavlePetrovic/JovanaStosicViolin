@@ -1,0 +1,95 @@
+@media only screen and (max-width: 1200px) {
+  .home {
+    background-image: url("../assets/images/home-img-lg.png");
+  }
+
+  .concerts {
+    background-image: url("../assets/images/concerts-img-lg.png");
+
+    .concert-wrapper {
+      .concert-helper {
+        display: none;
+      }
+    }
+  }
+
+  .contact {
+    background-image: url("../assets//images/contact-img-lg.png");
+  }
+
+  .home-text {
+    h1 {
+      font-size: 100px;
+    }
+  }
+
+  .about {
+    .about-content {
+      .box-1,
+      .box-3,
+      .box-5,
+      .box-7 {
+        flex-direction: column;
+        text-align: center;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .box-2,
+      .box-5,
+      .box-6,
+      .box-7 {
+        img {
+          display: none;
+        }
+
+        .mobile-pic {
+          display: block;
+          margin: 0;
+        }
+      }
+
+      .box-1 {
+        img {
+          max-width: 312px;
+        }
+        .text-1 {
+          text-align: center;
+          h2 {
+            @include mxCenter;
+          }
+        }
+      }
+
+      .box-2 {
+        flex-direction: column-reverse;
+        img {
+          max-width: 190px;
+        }
+        p {
+          text-align: center;
+        }
+      }
+
+      .box-3 {
+        img {
+          max-width: 380px;
+        }
+      }
+
+      .box-4 {
+        margin-block: 70px;
+      }
+
+      .box-6 {
+        text-align: center;
+        flex-direction: column-reverse;
+
+        img {
+          margin-top: 10px;
+          margin-right: -90px;
+        }
+      }
+    }
+  }
+}

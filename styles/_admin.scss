@@ -1,0 +1,51 @@
+.admin {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100vh;
+  gap: 20px;
+  background-color: $mainGreen;
+
+  h1 {
+    font-family: "Bodoni Moda", "serif";
+    font-size: 30px;
+    color: white;
+    font-weight: 500;
+  }
+
+  .admin-form {
+    font-family: "Poppins", "sans-serif";
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+
+    input {
+      padding: 10px;
+      width: 300px;
+      border: 2px solid transparent;
+      &:focus {
+        outline: none;
+      }
+    }
+  }
+
+  button {
+    width: 150px;
+    @include mxCenter;
+    padding-block: 8px;
+    cursor: pointer;
+    border: none;
+    border-radius: 3px;
+    background-color: white;
+  }
+
+  .error {
+    font-family: "Poppins", "sans-serif";
+    font-size: 14px;
+    font-weight: 300;
+    visibility: hidden;
+    color: white;
+  }
+}

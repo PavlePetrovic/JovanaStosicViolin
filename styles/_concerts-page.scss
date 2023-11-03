@@ -1,0 +1,169 @@
+.concerts {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-image: url("../assets/images/concerts-img-xl.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh;
+  width: 100%;
+
+  .navbar-concerts {
+    font-family: "Poppins", "sans-serif";
+    margin-top: 24px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 16px;
+    padding-inline: 16px;
+    height: fit-content;
+    width: fit-content;
+
+    h1 {
+      font-size: 24px;
+      font-weight: 700;
+      color: $white;
+    }
+
+    nav {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      text-transform: uppercase;
+
+      a {
+        font-size: 16px;
+        font-weight: 200;
+        letter-spacing: 0.1em;
+        color: $white;
+        font-size: 16px;
+        text-decoration: none;
+        &:hover {
+          border-color: $mainGreen;
+          color: $mainGreen;
+        }
+      }
+    }
+  }
+}
+
+.concerts-header {
+  display: none;
+}
+
+.concert-wrapper {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  padding: 4px;
+  overflow: auto;
+  margin-block: 40px;
+  overflow: hidden;
+
+  .concerts-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    gap: 20px;
+    overflow-y: auto;
+    overflow-x: hidden;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+    &::-webkit-scrollbar {
+      display: none;
+    }
+
+    .concert-card {
+      display: flex;
+      align-items: center;
+      max-width: 600px;
+      width: 100%;
+
+      .concert-time-place {
+        font-family: "Poppins", "sans-serif";
+        padding: 20px;
+        padding-left: 30px;
+        background-color: #d9d9d9;
+        border-top-left-radius: 10px;
+        border-bottom-left-radius: 10px;
+        max-width: 380px;
+        width: 100%;
+        height: 100%;
+
+        .concert-time {
+          width: fit-content;
+          color: $mainGreen;
+          font-weight: 500;
+          padding-bottom: 14px;
+          font-size: 18px;
+          border-bottom: 1px solid $mainGreen;
+        }
+
+        .concert-adress {
+          font-size: 18px;
+          padding-top: 14px;
+          color: $mainGreen;
+          font-weight: 500;
+        }
+
+        .concert-description {
+          margin-top: 10px;
+          font-size: 15px;
+          color: $mainGreen;
+          font-weight: 300;
+        }
+      }
+
+      .concert-date {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        background-color: $mainGreen;
+        border-top-right-radius: 10px;
+        border-bottom-right-radius: 10px;
+        padding-inline: 50px;
+        padding-top: 20px;
+        gap: 10px;
+        color: $white;
+        max-width: 220px;
+        width: 100%;
+        font-weight: 400;
+        height: 100%;
+
+        .concert-day-month {
+          font-family: "Bodoni Moda", "serif";
+          font-weight: 400;
+          font-size: 30px;
+          overflow: hidden;
+          text-overflow: ellipsis;
+          white-space: nowrap;
+          max-width: 100%;
+        }
+
+        .concert-line-2 {
+          width: 60px;
+          height: 1px;
+          background-color: $white;
+          margin-top: -6px;
+        }
+
+        .concert-year {
+          justify-self: flex-end;
+          font-size: 16px;
+        }
+      }
+    }
+  }
+
+  .concert-helper {
+    width: 60%;
+    height: 100%;
+  }
+}

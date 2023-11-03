@@ -1,0 +1,1806 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400;1,500;1,600;1,700;1,800&display=swap");
+.home {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-image: url("../assets/images/home-img-xl.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh;
+  width: 100%;
+}
+
+.home-header {
+  display: none;
+}
+
+.navbar-home {
+  font-family: "Poppins", "sans-serif";
+  margin-top: 24px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  padding-inline: 16px;
+  height: -moz-fit-content;
+  height: fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+.navbar-home h1 {
+  font-size: 24px;
+  font-weight: 700;
+  color: #ffffff;
+}
+.navbar-home nav {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  text-transform: uppercase;
+}
+.navbar-home nav a {
+  font-size: 16px;
+  font-weight: 200;
+  letter-spacing: 0.1em;
+  color: #ffffff;
+  font-size: 16px;
+  text-decoration: none;
+}
+.navbar-home nav a:hover {
+  color: #052b26;
+  border-color: #052b26;
+}
+
+.home-vertical-line {
+  display: block;
+  margin-block: 48px;
+  height: 100%;
+  width: 1px;
+  background-color: #ffffff;
+}
+
+.home-text {
+  text-align: center;
+}
+.home-text h3 {
+  font-family: "Bodoni Moda", "serif";
+  font-size: 18px;
+  font-weight: 400;
+  margin-bottom: -18px;
+  color: #ffffff;
+}
+.home-text .h1-mobile {
+  display: none;
+}
+.home-text h1 {
+  font-family: "Poppins", "sans-serif";
+  font-size: 110px;
+  font-weight: 600;
+  height: -moz-fit-content;
+  height: fit-content;
+  text-transform: uppercase;
+  color: #ffffff;
+}
+.home-text h2 {
+  font-family: "Bodoni Moda", "serif";
+  font-size: 24px;
+  font-weight: 400;
+  font-style: italic;
+  margin-top: -10px;
+  max-width: 630px;
+  text-align: center;
+  color: #ffffff;
+  margin-left: auto;
+  margin-right: auto;
+}
+.home-text .mobile-violinist {
+  display: none;
+}
+
+.about {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #052b26;
+  min-height: 100vh;
+  height: 100%;
+  width: 100%;
+}
+.about .audio-ico {
+  border-color: transparent;
+}
+.about .about-content {
+  max-width: 1400px;
+  width: 100%;
+  height: 100%;
+  padding-inline: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.about .about-content .box-1 {
+  margin-top: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  gap: 40px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.about .about-content .box-1 img {
+  max-width: 412px;
+  width: 100%;
+  height: auto;
+}
+.about .about-content .box-1 .text-1 {
+  max-width: 800px;
+  width: 100%;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  text-align: left;
+  gap: 40px;
+}
+.about .about-content .box-1 .text-1 h2 {
+  font-family: "Bodoni Moda", "serif";
+  font-size: 40px;
+  font-weight: 400;
+}
+.about .about-content .box-1 .text-1 p {
+  font-family: "Poppins", "sans-serif";
+  font-size: 16px;
+  font-weight: 200;
+}
+.about .about-content .box-2 {
+  margin-top: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  gap: 40px;
+  margin-left: auto;
+  margin-right: auto;
+  color: white;
+}
+.about .about-content .box-2 img {
+  max-width: 207px;
+  width: 100%;
+  height: auto;
+}
+.about .about-content .box-2 .mobile-pic {
+  display: none;
+}
+.about .about-content .box-2 p {
+  font-family: "Poppins", "sans-serif";
+  max-width: 600px;
+  width: 100%;
+  font-size: 16px;
+  font-weight: 200;
+  margin-top: 20px;
+}
+.about .about-content .box-3 {
+  margin-top: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  gap: 40px;
+  margin-left: auto;
+  margin-right: auto;
+  color: white;
+}
+.about .about-content .box-3 img {
+  max-width: 423px;
+  width: 100%;
+  height: auto;
+}
+.about .about-content .box-3 .text-1 {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-items: flex-start;
+}
+.about .about-content .box-3 .text-1 p {
+  font-family: "Poppins", "sans-serif";
+  max-width: 800px;
+  width: 100%;
+  font-size: 16px;
+  font-weight: 200;
+  margin-top: 20px;
+}
+.about .about-content .box-4 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  gap: 24px;
+  margin-left: auto;
+  margin-right: auto;
+  color: white;
+  font-family: "Bodoni Moda", "serif";
+  text-align: center;
+  margin-block: 50px;
+}
+.about .about-content .box-4 p {
+  max-width: 800px;
+  width: 100%;
+  font-size: 20px;
+  font-style: italic;
+  font-weight: 400;
+}
+.about .about-content .box-4 .line {
+  height: 1px;
+  background-color: white;
+  width: 8%;
+}
+.about .about-content .box-4 h3 {
+  font-weight: 400;
+  font-size: 24px;
+}
+.about .about-content .box-5 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  gap: 40px;
+  margin-left: auto;
+  margin-right: auto;
+  color: white;
+}
+.about .about-content .box-5 p {
+  margin-top: 40px;
+  font-family: "Poppins", "sans-serif";
+  max-width: 550px;
+  width: 100%;
+  font-size: 16px;
+  font-weight: 200;
+  margin-top: 20px;
+}
+.about .about-content .box-5 .mobile-pic {
+  display: none;
+}
+.about .about-content .box-5 img {
+  max-width: 207px;
+  width: 100%;
+  height: auto;
+}
+.about .about-content .box-6 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  gap: 40px;
+  margin-left: auto;
+  margin-right: auto;
+  color: white;
+  margin-top: 40px;
+}
+.about .about-content .box-6 p {
+  margin-bottom: 40px;
+  font-family: "Poppins", "sans-serif";
+  max-width: 550px;
+  width: 100%;
+  font-size: 16px;
+  font-weight: 200;
+  margin-top: 20px;
+}
+.about .about-content .box-6 .mobile-pic {
+  display: none;
+}
+.about .about-content .box-6 img {
+  max-width: 207px;
+  width: 100%;
+  height: auto;
+  margin-right: -60px;
+}
+.about .about-content .box-7 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 80px;
+  height: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  color: white;
+  margin-top: 40px;
+  text-align: left;
+  margin-top: 50px;
+}
+.about .about-content .box-7 .mobile-pic {
+  display: none;
+}
+.about .about-content .box-7 img {
+  max-width: 207px;
+  width: 100%;
+  height: auto;
+  margin-right: -60px;
+}
+.about .about-content .box-7 .text-1 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+}
+.about .about-content .box-7 .text-1 p {
+  margin-top: 20px;
+  font-family: "Poppins", "sans-serif";
+  max-width: 950px;
+  width: 100%;
+  font-size: 16px;
+  font-weight: 200;
+}
+.about .about-content .box-8 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 50px;
+  margin-bottom: 80px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
+.about .about-content .box-8 p {
+  margin-top: 10px;
+  font-family: "Poppins", "sans-serif";
+  max-width: 1000px;
+  width: 100%;
+  font-size: 16px;
+  font-weight: 200;
+  color: white;
+}
+
+.about-header {
+  display: none;
+}
+
+.navbar-about {
+  font-family: "Poppins", "sans-serif";
+  margin-top: 24px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  padding-inline: 16px;
+  height: -moz-fit-content;
+  height: fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+.navbar-about h1 {
+  font-size: 24px;
+  font-weight: 700;
+  color: #ffffff;
+}
+.navbar-about nav {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  text-transform: uppercase;
+}
+.navbar-about nav a {
+  font-size: 16px;
+  font-weight: 200;
+  letter-spacing: 0.1em;
+  color: #ffffff;
+  font-size: 16px;
+  text-decoration: none;
+}
+.navbar-about nav a:hover {
+  color: #052b26;
+  border-color: #052b26;
+}
+
+.media-page {
+  width: 100%;
+  height: 100vh;
+  background-color: #eeeeee;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.media-page .audio-ico {
+  border-color: #052b26;
+}
+.media-page .audio-ico i {
+  color: #052b26;
+}
+.media-page .media-header {
+  display: none;
+}
+.media-page .navbar-media {
+  font-family: "Poppins", "sans-serif";
+  margin-top: 24px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  padding-inline: 16px;
+  height: -moz-fit-content;
+  height: fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+.media-page .navbar-media h1 {
+  font-size: 24px;
+  font-weight: 700;
+  color: #052b26;
+}
+.media-page .navbar-media nav {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  text-transform: uppercase;
+}
+.media-page .navbar-media nav a {
+  font-size: 16px;
+  font-weight: 200;
+  letter-spacing: 0.1em;
+  color: #052b26;
+  font-size: 16px;
+  text-decoration: none;
+}
+.media-page .navbar-media nav a:hover {
+  border-color: #914836;
+  color: #914836;
+}
+.media-page .media-menu {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  flex-wrap: wrap;
+  overflow: auto;
+  gap: 140px;
+  margin-top: 50px;
+  cursor: pointer;
+}
+.media-page .media-menu div {
+  position: relative;
+  color: #ffffff;
+}
+.media-page .media-menu div:hover {
+  background-color: #914836;
+  color: #914836;
+}
+.media-page .media-menu div img {
+  width: 350px;
+  height: auto;
+}
+.media-page .media-menu div p {
+  font-family: "Bodoni Moda", "serif";
+  position: absolute;
+  bottom: 15px;
+  left: 28px;
+  font-weight: 500;
+  font-size: 50px;
+}
+
+.photos-gallery-page {
+  width: 100%;
+  min-height: 100vh;
+  background-color: #eeeeee;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.photos-gallery-page .audio-ico {
+  border-color: #052b26;
+}
+.photos-gallery-page .audio-ico i {
+  color: #052b26;
+}
+.photos-gallery-page .media-p-header {
+  display: none;
+  font-size: 30px;
+  font-family: "Bodoni Moda", "serif";
+  font-weight: 500;
+  text-align: center;
+  color: #052b26;
+  margin-top: 25px;
+}
+.photos-gallery-page .photos-gallery-navbar {
+  font-family: "Poppins", "sans-serif";
+  margin-top: 24px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  padding-inline: 16px;
+  height: -moz-fit-content;
+  height: fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+.photos-gallery-page .photos-gallery-navbar h1 {
+  font-size: 24px;
+  font-weight: 700;
+  color: #052b26;
+}
+.photos-gallery-page .photos-gallery-navbar nav {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  text-transform: uppercase;
+}
+.photos-gallery-page .photos-gallery-navbar nav a {
+  font-size: 16px;
+  font-weight: 200;
+  letter-spacing: 0.1em;
+  color: #052b26;
+  font-size: 16px;
+  text-decoration: none;
+}
+.photos-gallery-page .photos-gallery-navbar nav a:hover {
+  color: #914836;
+}
+.photos-gallery-page .gallery-wrapper {
+  width: 100%;
+  margin-block: 35px;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+  padding-inline: 20px;
+}
+.photos-gallery-page .gallery-wrapper::-webkit-scrollbar {
+  display: none;
+}
+.photos-gallery-page .photos-gallery-box {
+  font-family: "Poppins", "sans-serif";
+  width: 100%;
+}
+.photos-gallery-page .photos-gallery-box .nGY2GallerySub > div {
+  border: none !important;
+  background-color: transparent;
+}
+
+.video-gallery-page {
+  width: 100%;
+  min-height: 100vh;
+  background-color: #eeeeee;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.video-gallery-page .audio-ico {
+  border-color: #052b26;
+}
+.video-gallery-page .audio-ico i {
+  color: #052b26;
+}
+.video-gallery-page .media-v-header {
+  display: none;
+  font-size: 30px;
+  font-family: "Bodoni Moda", "serif";
+  font-weight: 500;
+  text-align: center;
+  color: #052b26;
+  margin-top: 25px;
+}
+.video-gallery-page .video-gallery-navbar {
+  font-family: "Poppins", "sans-serif";
+  margin-top: 24px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  padding-inline: 16px;
+  height: -moz-fit-content;
+  height: fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+.video-gallery-page .video-gallery-navbar h1 {
+  font-size: 24px;
+  font-weight: 700;
+  color: #052b26;
+}
+.video-gallery-page .video-gallery-navbar nav {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  text-transform: uppercase;
+}
+.video-gallery-page .video-gallery-navbar nav a {
+  font-size: 16px;
+  font-weight: 200;
+  letter-spacing: 0.1em;
+  color: #052b26;
+  font-size: 16px;
+  text-decoration: none;
+}
+.video-gallery-page .video-gallery-navbar nav a:hover {
+  color: #914836;
+}
+.video-gallery-page .video-gallery-wrapper {
+  margin-bottom: 35px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  max-width: 1200px;
+  gap: 20px;
+  margin-top: 35px;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+  padding-inline: 20px;
+}
+.video-gallery-page .video-gallery-wrapper::-webkit-scrollbar {
+  display: none;
+}
+.video-gallery-page .video-gallery-wrapper iframe {
+  width: 560px;
+  height: 315px;
+}
+
+.concerts {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-image: url("../assets/images/concerts-img-xl.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh;
+  width: 100%;
+}
+.concerts .navbar-concerts {
+  font-family: "Poppins", "sans-serif";
+  margin-top: 24px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  padding-inline: 16px;
+  height: -moz-fit-content;
+  height: fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+.concerts .navbar-concerts h1 {
+  font-size: 24px;
+  font-weight: 700;
+  color: #ffffff;
+}
+.concerts .navbar-concerts nav {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  text-transform: uppercase;
+}
+.concerts .navbar-concerts nav a {
+  font-size: 16px;
+  font-weight: 200;
+  letter-spacing: 0.1em;
+  color: #ffffff;
+  font-size: 16px;
+  text-decoration: none;
+}
+.concerts .navbar-concerts nav a:hover {
+  border-color: #052b26;
+  color: #052b26;
+}
+
+.concerts-header {
+  display: none;
+}
+
+.concert-wrapper {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  padding: 4px;
+  overflow: auto;
+  margin-block: 40px;
+  overflow: hidden;
+}
+.concert-wrapper .concerts-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  gap: 20px;
+  overflow-y: auto;
+  overflow-x: hidden;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+.concert-wrapper .concerts-box::-webkit-scrollbar {
+  display: none;
+}
+.concert-wrapper .concerts-box .concert-card {
+  display: flex;
+  align-items: center;
+  max-width: 600px;
+  width: 100%;
+}
+.concert-wrapper .concerts-box .concert-card .concert-time-place {
+  font-family: "Poppins", "sans-serif";
+  padding: 20px;
+  padding-left: 30px;
+  background-color: #d9d9d9;
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+  max-width: 380px;
+  width: 100%;
+  height: 100%;
+}
+.concert-wrapper .concerts-box .concert-card .concert-time-place .concert-time {
+  width: -moz-fit-content;
+  width: fit-content;
+  color: #052b26;
+  font-weight: 500;
+  padding-bottom: 14px;
+  font-size: 18px;
+  border-bottom: 1px solid #052b26;
+}
+.concert-wrapper .concerts-box .concert-card .concert-time-place .concert-adress {
+  font-size: 18px;
+  padding-top: 14px;
+  color: #052b26;
+  font-weight: 500;
+}
+.concert-wrapper .concerts-box .concert-card .concert-time-place .concert-description {
+  margin-top: 10px;
+  font-size: 15px;
+  color: #052b26;
+  font-weight: 300;
+}
+.concert-wrapper .concerts-box .concert-card .concert-date {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #052b26;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+  padding-inline: 50px;
+  padding-top: 20px;
+  gap: 10px;
+  color: #ffffff;
+  max-width: 220px;
+  width: 100%;
+  font-weight: 400;
+  height: 100%;
+}
+.concert-wrapper .concerts-box .concert-card .concert-date .concert-day-month {
+  font-family: "Bodoni Moda", "serif";
+  font-weight: 400;
+  font-size: 30px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  max-width: 100%;
+}
+.concert-wrapper .concerts-box .concert-card .concert-date .concert-line-2 {
+  width: 60px;
+  height: 1px;
+  background-color: #ffffff;
+  margin-top: -6px;
+}
+.concert-wrapper .concerts-box .concert-card .concert-date .concert-year {
+  justify-self: flex-end;
+  font-size: 16px;
+}
+.concert-wrapper .concert-helper {
+  width: 60%;
+  height: 100%;
+}
+
+.contact {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-image: url("../assets/images/contact-img-xl.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh;
+  width: 100%;
+}
+
+.contact-header {
+  display: none;
+}
+
+.contact-h1-mobile {
+  display: none;
+}
+
+.navbar-contact {
+  font-family: "Poppins", "sans-serif";
+  margin-top: 24px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  padding-inline: 16px;
+  height: -moz-fit-content;
+  height: fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+.navbar-contact h1 {
+  font-size: 24px;
+  font-weight: 700;
+  color: #ffffff;
+}
+.navbar-contact nav {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  text-transform: uppercase;
+}
+.navbar-contact nav a {
+  font-size: 16px;
+  font-weight: 200;
+  letter-spacing: 0.1em;
+  color: #ffffff;
+  font-size: 16px;
+  text-decoration: none;
+  border-color: #ffffff;
+}
+.navbar-contact nav a:hover {
+  color: #052b26;
+  border-color: #052b26;
+}
+
+.contact-wrapper {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  padding: 4px;
+}
+.contact-wrapper .helper {
+  width: 100%;
+  height: 100%;
+}
+.contact-wrapper .form {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  gap: 20px;
+}
+.contact-wrapper .form h1 {
+  font-family: "Bodoni Moda", "serif";
+  font-size: 40px;
+  color: white;
+  font-weight: 400;
+}
+.contact-wrapper .form form {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 100%;
+  height: -moz-fit-content;
+  height: fit-content;
+  gap: 15px;
+}
+.contact-wrapper .form form .firstname,
+.contact-wrapper .form form .lastname,
+.contact-wrapper .form form .send-email {
+  font-family: "Poppins", "sans-serif";
+  background-color: #d9d9d9;
+  color: black;
+  padding: 10px;
+  font-size: 14px;
+  max-width: 500px;
+  width: 100%;
+  border: none;
+}
+.contact-wrapper .form form .firstname:focus,
+.contact-wrapper .form form .lastname:focus,
+.contact-wrapper .form form .send-email:focus {
+  outline: none;
+}
+.contact-wrapper .form form .send-email {
+  border: none;
+  background-color: #052b26;
+  color: #d9d9d9;
+  font-weight: 300;
+  padding: 10px;
+  max-width: 250px;
+  text-align: left;
+  width: 100%;
+  cursor: pointer;
+}
+.contact-wrapper .form form .send-email:hover {
+  background-color: rgba(5, 43, 38, 0.7411764706);
+  transition: all 0.15s;
+}
+.contact-wrapper .form .contact-line {
+  display: block;
+  background-color: #d9d9d9;
+  margin-block: 20px;
+  height: 1px;
+  max-width: 350px;
+  width: 90%;
+}
+.contact-wrapper .form .social-icons-contact {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 10px;
+}
+.contact-wrapper .form .social-icons-contact .icon-box {
+  font-family: "Poppins", "sans-serif";
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.contact-wrapper .form .social-icons-contact .icon-box a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 999px;
+  background-color: #ffffff;
+  height: 35px;
+  width: 35px;
+  text-decoration: none;
+  cursor: pointer;
+}
+.contact-wrapper .form .social-icons-contact .icon-box a:hover {
+  background-color: rgb(218, 216, 216);
+}
+.contact-wrapper .form .social-icons-contact .icon-box a i {
+  font-size: 20px;
+  color: #052b26;
+}
+.contact-wrapper .form .social-icons-contact .icon-box p {
+  color: white;
+  font-size: 16px;
+  font-weight: 200;
+}
+
+.admin {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100vh;
+  gap: 20px;
+  background-color: #052b26;
+}
+.admin h1 {
+  font-family: "Bodoni Moda", "serif";
+  font-size: 30px;
+  color: white;
+  font-weight: 500;
+}
+.admin .admin-form {
+  font-family: "Poppins", "sans-serif";
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.admin .admin-form input {
+  padding: 10px;
+  width: 300px;
+  border: 2px solid transparent;
+}
+.admin .admin-form input:focus {
+  outline: none;
+}
+.admin button {
+  width: 150px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-block: 8px;
+  cursor: pointer;
+  border: none;
+  border-radius: 3px;
+  background-color: white;
+}
+.admin .error {
+  font-family: "Poppins", "sans-serif";
+  font-size: 14px;
+  font-weight: 300;
+  visibility: hidden;
+  color: white;
+}
+
+.admin-editor {
+  font-family: "Poppins", "sans-serif";
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100vh;
+  gap: 20px;
+  background-color: #052b26;
+  padding: 20px;
+}
+.admin-editor h1 {
+  color: #ffffff;
+  font-size: 30px;
+  font-weight: 300;
+  margin-top: 30px;
+  font-weight: 200;
+}
+.admin-editor .editor-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 40px;
+  height: 100%;
+  width: 100%;
+}
+.admin-editor .editor-wrapper .editor-helper {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  height: fit-cont;
+  width: 100%;
+}
+.admin-editor .editor-wrapper .editor-helper button {
+  background-color: white;
+  border: none;
+  border-radius: 4px;
+  color: black;
+  padding: 10px;
+  cursor: pointer;
+}
+.admin-editor .editor-wrapper .editor-list {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+}
+.admin-editor .editor-wrapper .editor-list h2 {
+  font-size: 22px;
+  font-weight: 200;
+  color: white;
+  text-align: center;
+  margin-bottom: 20px;
+}
+.admin-editor .editor-wrapper .editor-list .concerts-published {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-inline: 15px;
+  max-width: 600px;
+  width: 100%;
+  gap: 20px;
+}
+.admin-editor .editor-wrapper .editor-list .concerts-published .published-box {
+  display: flex;
+  flex-direction: row;
+  gap: 15px;
+  padding: 10px 20px;
+  align-items: center;
+  border-radius: 30px;
+  border-radius: 10px;
+  background-color: white;
+}
+.admin-editor .editor-wrapper .editor-list .concerts-published .published-box .fa-trash {
+  color: red;
+  cursor: pointer;
+}
+.admin-editor .editor-wrapper .editor-list .concerts-published .published-box .fa-pen-to-square {
+  color: blue;
+  cursor: pointer;
+}
+.admin-editor .inputs-modal {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  z-index: 999;
+  background-color: #052b26;
+}
+.admin-editor .inputs-modal h1 {
+  margin-bottom: 28px;
+  font-weight: 300;
+}
+.admin-editor .inputs-modal .close-modal {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50px;
+  background-color: rgb(249, 159, 159);
+  color: white;
+  min-width: 47px;
+  min-height: 47px;
+  font-size: 20px;
+  cursor: pointer;
+}
+.admin-editor .inputs-modal .close-modal:hover {
+  background-color: rgb(217, 88, 88);
+}
+.admin-editor .inputs-modal .editor-form {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  height: -moz-fit-content;
+  height: fit-content;
+  width: 100%;
+  padding: 5px;
+}
+.admin-editor .inputs-modal .editor-form .input-box {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 10px;
+  max-width: 400px;
+  width: 100%;
+}
+.admin-editor .inputs-modal .editor-form .input-box label {
+  color: white;
+  font-size: 14px;
+}
+.admin-editor .inputs-modal .editor-form .input-box input {
+  padding: 12px;
+  width: 100%;
+}
+.admin-editor .inputs-modal .editor-form .input-box textarea {
+  font-family: "Poppins", "sans-serif";
+  padding: 12px;
+  width: 100%;
+}
+.admin-editor .inputs-modal .editor-form button {
+  margin-top: 30px;
+  margin-bottom: 20px;
+  padding: 10px;
+  padding-inline: 20px;
+  background-color: rgb(138, 228, 138);
+  color: black;
+  border-radius: 4px;
+  border: none;
+  cursor: pointer;
+}
+.admin-editor .inputs-modal .editor-form button:hover {
+  background-color: rgb(89, 171, 89);
+}
+.admin-editor .inputs-modal-edit {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  z-index: 999;
+  background-color: #052b26;
+}
+.admin-editor .inputs-modal-edit h1 {
+  margin-bottom: 28px;
+  font-weight: 300;
+}
+.admin-editor .inputs-modal-edit .close-modal {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50px;
+  background-color: rgb(249, 159, 159);
+  color: white;
+  min-width: 47px;
+  min-height: 47px;
+  font-size: 20px;
+  cursor: pointer;
+}
+.admin-editor .inputs-modal-edit .close-modal:hover {
+  background-color: rgb(217, 88, 88);
+}
+.admin-editor .inputs-modal-edit .editor-form {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  height: -moz-fit-content;
+  height: fit-content;
+  width: 100%;
+  padding: 5px;
+}
+.admin-editor .inputs-modal-edit .editor-form .input-box {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 10px;
+  max-width: 400px;
+  width: 100%;
+}
+.admin-editor .inputs-modal-edit .editor-form .input-box label {
+  color: white;
+  font-size: 14px;
+}
+.admin-editor .inputs-modal-edit .editor-form .input-box input {
+  padding: 12px;
+  width: 100%;
+}
+.admin-editor .inputs-modal-edit .editor-form .input-box textarea {
+  font-family: "Poppins", "sans-serif";
+  padding: 12px;
+  width: 100%;
+}
+.admin-editor .inputs-modal-edit .editor-form button {
+  margin-top: 30px;
+  margin-bottom: 20px;
+  padding: 10px;
+  padding-inline: 20px;
+  background-color: rgb(73, 175, 248);
+  color: black;
+  border-radius: 4px;
+  border: none;
+  cursor: pointer;
+}
+.admin-editor .inputs-modal-edit .editor-form button:hover {
+  background-color: rgb(60, 149, 214);
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  -webkit-tap-highlight-color: transparent;
+}
+
+body {
+  animation: fadeInAnimation ease 0.2s;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+}
+
+.transition-all {
+  transition-property: all;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 150ms;
+}
+
+.hidden {
+  display: none;
+}
+
+.invisible {
+  visibility: hidden;
+}
+
+.audio-ico {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: auto;
+  z-index: 50;
+  top: 30px;
+  left: 0;
+  left: 30px;
+  height: 39px;
+  width: 39px;
+  cursor: pointer;
+  border-radius: 999px;
+  background-color: transparent;
+  border: 1px solid white;
+  font-size: 16px;
+}
+.audio-ico i {
+  color: white;
+}
+
+.mobile-menu {
+  display: none;
+}
+
+.social-icons {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 24px;
+}
+.social-icons a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 999px;
+  background-color: #052b26;
+  height: 35px;
+  width: 35px;
+  text-decoration: none;
+  cursor: pointer;
+}
+.social-icons a i {
+  font-size: 20px;
+  color: #ffffff;
+}
+
+@keyframes fadeInAnimation {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+.fade-animation {
+  animation: fadeInAnimation ease 0.2s;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+}
+
+@media only screen and (max-width: 1200px) {
+  .home {
+    background-image: url("../assets/images/home-img-lg.png");
+  }
+  .concerts {
+    background-image: url("../assets/images/concerts-img-lg.png");
+  }
+  .concerts .concert-wrapper .concert-helper {
+    display: none;
+  }
+  .contact {
+    background-image: url("../assets//images/contact-img-lg.png");
+  }
+  .home-text h1 {
+    font-size: 100px;
+  }
+  .about .about-content .box-1,
+  .about .about-content .box-3,
+  .about .about-content .box-5,
+  .about .about-content .box-7 {
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+  }
+  .about .about-content .box-2 img,
+  .about .about-content .box-5 img,
+  .about .about-content .box-6 img,
+  .about .about-content .box-7 img {
+    display: none;
+  }
+  .about .about-content .box-2 .mobile-pic,
+  .about .about-content .box-5 .mobile-pic,
+  .about .about-content .box-6 .mobile-pic,
+  .about .about-content .box-7 .mobile-pic {
+    display: block;
+    margin: 0;
+  }
+  .about .about-content .box-1 img {
+    max-width: 312px;
+  }
+  .about .about-content .box-1 .text-1 {
+    text-align: center;
+  }
+  .about .about-content .box-1 .text-1 h2 {
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .about .about-content .box-2 {
+    flex-direction: column-reverse;
+  }
+  .about .about-content .box-2 img {
+    max-width: 190px;
+  }
+  .about .about-content .box-2 p {
+    text-align: center;
+  }
+  .about .about-content .box-3 img {
+    max-width: 380px;
+  }
+  .about .about-content .box-4 {
+    margin-block: 70px;
+  }
+  .about .about-content .box-6 {
+    text-align: center;
+    flex-direction: column-reverse;
+  }
+  .about .about-content .box-6 img {
+    margin-top: 10px;
+    margin-right: -90px;
+  }
+}
+@media only screen and (max-width: 1024px) {
+  .home-text h1 {
+    font-size: 90px;
+  }
+  .contact-wrapper {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    padding: 4px;
+  }
+  .contact-wrapper .helper {
+    display: none;
+  }
+  .contact-wrapper .form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    gap: 20px;
+  }
+  .contact-wrapper .form h1 {
+    font-family: "Bodoni Moda", "serif";
+    font-size: 40px;
+    color: white;
+    font-weight: 400;
+  }
+  .contact-wrapper .form form {
+    align-items: center;
+    padding: 15px;
+  }
+  .contact-wrapper .form form .send-email {
+    text-align: center;
+  }
+}
+@media only screen and (max-width: 768px) {
+  .navbar-home {
+    display: none;
+  }
+  .navbar-media {
+    display: none !important;
+  }
+  .navbar-contact {
+    display: none !important;
+  }
+  .navbar-concerts {
+    display: none !important;
+  }
+  .photos-gallery-navbar {
+    display: none !important;
+  }
+  .navbar-about {
+    display: none !important;
+  }
+  .video-gallery-navbar {
+    display: none !important;
+  }
+  .social-icons {
+    display: none;
+  }
+  .home {
+    background-image: url("../assets/images/home-img-sm.png");
+    background-position: center center;
+  }
+  .home .home-vertical-line {
+    visibility: hidden;
+  }
+  .home-header {
+    display: block;
+    font-size: 30px;
+    font-family: "Bodoni Moda", "serif";
+    font-weight: 500;
+    text-align: center;
+    color: #ffffff;
+    margin-top: 25px;
+  }
+  .about-header {
+    display: block;
+    font-size: 30px;
+    font-family: "Bodoni Moda", "serif";
+    font-weight: 500;
+    text-align: center;
+    color: #ffffff;
+    margin-top: 25px;
+  }
+  .concerts {
+    background-image: url("../assets/images/concerts-img-sm.png");
+    background-position: center center;
+  }
+  .home-text h3 {
+    display: none;
+  }
+  .home-text .mobile-violinist {
+    display: block;
+    font-family: "Bodoni Moda", "serif";
+    font-size: 20px;
+    font-weight: 500;
+    margin-top: 20px;
+    color: #ffffff;
+  }
+  .home-text .h1-mobile {
+    display: block;
+    font-family: "Poppins", "sans-serif";
+    font-weight: 600;
+    color: #ffffff;
+  }
+  .home-text .h1-mobile p {
+    text-transform: uppercase;
+    font-size: 80px;
+  }
+  .home-text .h1-mobile .second {
+    margin-top: -40px;
+  }
+  .home-text h1 {
+    font-size: 80px;
+    padding-inline: 6px;
+    display: none;
+  }
+  .home-text h2 {
+    font-size: 19px;
+    padding-inline: 8px;
+    margin-top: -2px;
+  }
+  .mobile-menu {
+    display: block;
+  }
+  .mobile-menu .mobile-menu-icon {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: auto;
+    z-index: 50;
+    top: 30px;
+    left: 0;
+    right: 30px;
+    height: 40px;
+    width: 40px;
+    cursor: pointer;
+    border-radius: 999px;
+    background-color: #052b26;
+    font-size: 25px;
+    color: white;
+  }
+  .mobile-menu .mobile-menu-tooltip-box {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: transparent;
+    overflow: hidden;
+    z-index: 5;
+  }
+  .mobile-menu .mobile-menu-tooltip-box .mobile-menu-tooltip {
+    font-family: "Poppins", "sans-serif";
+    font-weight: 200;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    background-color: #052b26;
+    padding-inline: 12px;
+    padding-block: 30px;
+    text-align: center;
+    width: 100%;
+    height: 100vh;
+    margin-left: auto;
+    margin-right: auto;
+    text-transform: uppercase;
+    color: #ffffff;
+  }
+  .mobile-menu .mobile-menu-tooltip-box .mobile-menu-tooltip nav {
+    display: flex;
+    gap: 15px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  .mobile-menu .mobile-menu-tooltip-box .mobile-menu-tooltip nav a {
+    text-decoration: none;
+    color: #ffffff;
+  }
+  .mobile-menu .mobile-menu-close {
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: auto;
+    top: 30px;
+    left: 0;
+    right: 30px;
+    z-index: 100;
+    height: 40px;
+    width: 40px;
+    cursor: pointer;
+    border-radius: 999px;
+    background-color: #ffffff;
+  }
+  .mobile-menu .mobile-menu-close i {
+    font-size: 22px;
+    color: #052b26;
+  }
+  .mobile-menu-vertical-line {
+    display: block;
+    margin-block: 30px;
+    height: 100px;
+    width: 1px;
+    background-color: #ffffff;
+  }
+  .social-icons-mobile {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 20px;
+  }
+  .social-icons-mobile a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 999px;
+    background-color: #052b26;
+    height: 35px;
+    width: 35px;
+    text-decoration: none !important;
+  }
+  .social-icons-mobile a:hover {
+    background-color: orange;
+    text-decoration: none !important;
+  }
+  .social-icons-mobile a i {
+    font-size: 20px;
+    color: #ffffff;
+    text-decoration: none !important;
+  }
+  .media-page {
+    height: initial;
+    background-color: #eeeeee;
+  }
+  .media-page .media-header {
+    display: block;
+    font-size: 30px;
+    font-family: "Bodoni Moda", "serif";
+    font-weight: 500;
+    text-align: center;
+    color: #052b26;
+    margin-top: 25px;
+  }
+  .media-page .media-menu {
+    flex-direction: column;
+    flex-wrap: nowrap;
+    overflow: initial;
+    width: 100%;
+    margin: 0;
+    gap: 30px;
+    margin-block: 30px;
+  }
+  .media-page .media-menu div img {
+    width: 230px;
+  }
+  .media-page .media-menu div p {
+    font-size: 40px;
+  }
+  .video-gallery-wrapper iframe {
+    width: 280px !important;
+    height: 157px !important;
+  }
+  .video-gallery-page .media-v-header {
+    display: block;
+  }
+  .photos-gallery-page .media-p-header {
+    display: block;
+  }
+  .concerts-header {
+    display: block;
+    font-size: 30px;
+    font-family: "Bodoni Moda", "serif";
+    font-weight: 500;
+    text-align: center;
+    color: #ffffff;
+    margin-top: 25px;
+  }
+  .concert-wrapper .concerts-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-block: 40px;
+    width: 100%;
+    gap: 30px;
+    margin-block: 20px;
+    margin-inline: 20px;
+  }
+  .concert-wrapper .concerts-box .concert-card {
+    display: flex;
+    flex-direction: column;
+    margin-inline: 20px;
+  }
+  .concert-wrapper .concerts-box .concert-card .concert-time-place {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    font-family: "Poppins", "sans-serif";
+    padding: 17px;
+    padding-left: 17px;
+    background-color: #d9d9d9;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    border-bottom-left-radius: 0px;
+    max-width: 400px;
+    width: 100%;
+  }
+  .concert-wrapper .concerts-box .concert-card .concert-time-place .concert-time {
+    width: -moz-fit-content;
+    width: fit-content;
+    color: #052b26;
+    font-weight: 500;
+    padding-bottom: 14px;
+    font-size: 18px;
+    border-bottom: 1px solid #052b26;
+  }
+  .concert-wrapper .concerts-box .concert-card .concert-time-place .concert-adress {
+    font-size: 18px;
+    padding-top: 14px;
+    color: #052b26;
+    font-weight: 300;
+  }
+  .concert-wrapper .concerts-box .concert-card .concert-date {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #052b26;
+    border-top-right-radius: 0px;
+    border-bottom-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+    padding-inline: 50px;
+    padding-block: 15px;
+    max-width: 400px;
+    width: 100%;
+    gap: 10px;
+    color: #ffffff;
+    font-weight: 400;
+  }
+  .concert-wrapper .concerts-box .concert-card .concert-date .concert-day-month {
+    font-family: "Bodoni Moda", "serif";
+    font-weight: 400;
+    font-size: 30px;
+  }
+  .concert-wrapper .concerts-box .concert-card .concert-date .concert-line-2 {
+    width: 60px;
+    height: 1px;
+    background-color: #ffffff;
+    margin-top: -6px;
+  }
+  .concert-wrapper .concerts-box .concert-card .concert-date .concert-year {
+    justify-self: flex-end;
+    font-size: 16px;
+  }
+  .contact {
+    background-image: url("../assets/images/contact-img-sm.png");
+    background-position: center center;
+  }
+  .contact .contact-h1-mobile {
+    display: block;
+    font-family: "Bodoni Moda", "serif";
+    font-size: 30px;
+    color: white;
+    font-weight: 500;
+    margin-top: 24px;
+  }
+  .contact .contact-wrapper .form h1 {
+    display: none;
+  }
+}/*# sourceMappingURL=style.css.map */

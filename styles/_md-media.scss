@@ -1,0 +1,401 @@
+@media only screen and (max-width: 768px) {
+  .navbar-home {
+    display: none;
+  }
+
+  .navbar-media {
+    display: none !important;
+  }
+
+  .navbar-contact {
+    display: none !important;
+  }
+
+  .navbar-concerts {
+    display: none !important;
+  }
+
+  .photos-gallery-navbar {
+    display: none !important;
+  }
+
+  .navbar-about {
+    display: none !important;
+  }
+
+  .video-gallery-navbar {
+    display: none !important;
+  }
+
+  .social-icons {
+    display: none;
+  }
+
+  .home {
+    background-image: url("../assets/images/home-img-sm.png");
+    background-position: center center;
+
+    .home-vertical-line {
+      visibility: hidden;
+    }
+  }
+
+  .home-header {
+    display: block;
+    font-size: 30px;
+    font-family: "Bodoni Moda", "serif";
+    font-weight: 500;
+    text-align: center;
+    color: $white;
+    margin-top: 25px;
+  }
+
+  .about-header {
+    display: block;
+    font-size: 30px;
+    font-family: "Bodoni Moda", "serif";
+    font-weight: 500;
+    text-align: center;
+    color: $white;
+    margin-top: 25px;
+  }
+
+  .concerts {
+    background-image: url("../assets/images/concerts-img-sm.png");
+    background-position: center center;
+  }
+
+  .home-text {
+    h3 {
+      display: none;
+    }
+
+    .mobile-violinist {
+      display: block;
+      font-family: "Bodoni Moda", "serif";
+      font-size: 20px;
+      font-weight: 500;
+      margin-top: 20px;
+      color: $white;
+    }
+    .h1-mobile {
+      display: block;
+      font-family: "Poppins", "sans-serif";
+      font-weight: 600;
+      color: $white;
+
+      p {
+        text-transform: uppercase;
+        font-size: 80px;
+      }
+
+      .second {
+        margin-top: -40px;
+      }
+    }
+    h1 {
+      font-size: 80px;
+      padding-inline: 6px;
+      display: none;
+    }
+    h2 {
+      font-size: 19px;
+      padding-inline: 8px;
+      margin-top: -2px;
+    }
+  }
+
+  .mobile-menu {
+    display: block;
+
+    .mobile-menu-icon {
+      position: absolute;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-left: auto;
+      z-index: 50;
+      top: 30px;
+      left: 0;
+      right: 30px;
+      height: 40px;
+      width: 40px;
+      cursor: pointer;
+      border-radius: 999px;
+      background-color: $mainGreen;
+      font-size: 25px;
+      color: white;
+    }
+
+    .mobile-menu-tooltip-box {
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background-color: transparent;
+      overflow: hidden;
+      z-index: 5;
+
+      .mobile-menu-tooltip {
+        font-family: "Poppins", "sans-serif";
+        font-weight: 200;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 20px;
+        background-color: #052b26;
+        padding-inline: 12px;
+        padding-block: 30px;
+        text-align: center;
+        width: 100%;
+        height: 100vh;
+        margin-left: auto;
+        margin-right: auto;
+        text-transform: uppercase;
+        color: $white;
+
+        nav {
+          display: flex;
+          gap: 15px;
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
+
+          a {
+            text-decoration: none;
+            color: $white;
+          }
+        }
+      }
+    }
+
+    .mobile-menu-close {
+      position: fixed;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-left: auto;
+      top: 30px;
+      left: 0;
+      right: 30px;
+      z-index: 100;
+      height: 40px;
+      width: 40px;
+      cursor: pointer;
+      border-radius: 999px;
+      background-color: $white;
+
+      i {
+        font-size: 22px;
+        color: $mainGreen;
+      }
+    }
+  }
+
+  .mobile-menu-vertical-line {
+    display: block;
+    margin-block: 30px;
+    height: 100px;
+    width: 1px;
+    background-color: $white;
+  }
+
+  .social-icons-mobile {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 20px;
+
+    a {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 999px;
+      background-color: $mainGreen;
+      height: 35px;
+      width: 35px;
+      text-decoration: none !important;
+      &:hover {
+        background-color: orange;
+        text-decoration: none !important;
+      }
+
+      i {
+        font-size: 20px;
+        color: $white;
+        text-decoration: none !important;
+      }
+    }
+  }
+
+  .media-page {
+    height: initial;
+    background-color: $mainSand;
+
+    .media-header {
+      display: block;
+      font-size: 30px;
+      font-family: "Bodoni Moda", "serif";
+      font-weight: 500;
+      text-align: center;
+      color: $mainGreen;
+      margin-top: 25px;
+    }
+
+    .media-menu {
+      flex-direction: column;
+      flex-wrap: nowrap;
+      overflow: initial;
+      width: 100%;
+      margin: 0;
+      gap: 30px;
+      margin-block: 30px;
+
+      div {
+        img {
+          width: 230px;
+        }
+        p {
+          font-size: 40px;
+        }
+      }
+    }
+  }
+
+  .video-gallery-wrapper {
+    iframe {
+      width: 280px !important;
+      height: 157px !important;
+    }
+  }
+
+  .video-gallery-page {
+    .media-v-header {
+      display: block;
+    }
+  }
+
+  .photos-gallery-page {
+    .media-p-header {
+      display: block;
+    }
+  }
+
+  .concerts-header {
+    display: block;
+    font-size: 30px;
+    font-family: "Bodoni Moda", "serif";
+    font-weight: 500;
+    text-align: center;
+    color: $white;
+    margin-top: 25px;
+  }
+
+  .concert-wrapper {
+    .concerts-box {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding-block: 40px;
+      width: 100%;
+      gap: 30px;
+      margin-block: 20px;
+      margin-inline: 20px;
+
+      .concert-card {
+        display: flex;
+        flex-direction: column;
+        margin-inline: 20px;
+
+        .concert-time-place {
+          display: flex;
+          align-items: center;
+          flex-direction: column;
+          text-align: center;
+          font-family: "Poppins", "sans-serif";
+          padding: 17px;
+          padding-left: 17px;
+          background-color: #d9d9d9;
+          border-top-left-radius: 10px;
+          border-top-right-radius: 10px;
+          border-bottom-left-radius: 0px;
+          max-width: 400px;
+          width: 100%;
+
+          .concert-time {
+            width: fit-content;
+            color: $mainGreen;
+            font-weight: 500;
+            padding-bottom: 14px;
+            font-size: 18px;
+            border-bottom: 1px solid $mainGreen;
+          }
+
+          .concert-adress {
+            font-size: 18px;
+            padding-top: 14px;
+            color: $mainGreen;
+            font-weight: 300;
+          }
+        }
+
+        .concert-date {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
+          background-color: $mainGreen;
+          border-top-right-radius: 0px;
+          border-bottom-right-radius: 10px;
+          border-bottom-left-radius: 10px;
+          padding-inline: 50px;
+          padding-block: 15px;
+          max-width: 400px;
+          width: 100%;
+          gap: 10px;
+          color: $white;
+          font-weight: 400;
+
+          .concert-day-month {
+            font-family: "Bodoni Moda", "serif";
+            font-weight: 400;
+            font-size: 30px;
+          }
+
+          .concert-line-2 {
+            width: 60px;
+            height: 1px;
+            background-color: $white;
+            margin-top: -6px;
+          }
+
+          .concert-year {
+            justify-self: flex-end;
+            font-size: 16px;
+          }
+        }
+      }
+    }
+  }
+
+  .contact {
+    background-image: url("../assets/images/contact-img-sm.png");
+    background-position: center center;
+    .contact-h1-mobile {
+      display: block;
+      font-family: "Bodoni Moda", "serif";
+      font-size: 30px;
+      color: white;
+      font-weight: 500;
+      margin-top: 24px;
+    }
+    .contact-wrapper {
+      .form {
+        h1 {
+          display: none;
+        }
+      }
+    }
+  }
+}

@@ -1630,6 +1630,7 @@ body {
   }
   .mobile-menu {
     display: block;
+    z-index: 500;
   }
   .mobile-menu .mobile-menu-icon {
     position: absolute;

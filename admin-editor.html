@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Admin Editor | Jovana Stosic Violin</title>
     <link rel="stylesheet" href="./styles/style.css" />
+    <link rel="stylesheet" href="https://unpkg.com/js-datepicker/dist/datepicker.min.css" />
     <script src="https://kit.fontawesome.com/a328b1d1bc.js" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
   </head>
@@ -15,33 +16,32 @@
     }
   </style>
   <body>
-    <section class="admin-editor transition-all">
+    <section class="admin-editor transition-all" id="admin-editor">
       <div class="audio-ico"></div>
-      <div class="navbar-home">
+      <div class="navbar-home" style="margin-left: auto">
         <nav>
           <a href="./index.html" class="transition-all">Home</a>
-          <a href="./about.html" class="transition-all">About</a>
-          <a href="./media.html" class="transition-all">Media</a>
           <a href="./concerts.html" class="transition-all">Concerts</a>
-          <a href="./contact.html" class="transition-all">Contact</a>
         </nav>
       </div>
 
       <h1>Admin Editor</h1>
       <div class="editor-wrapper">
         <div class="editor-helper">
-          <button id="add-concert" class="transition-all">Add New Concert</button>
+          <button id="add-concert" class="transition-all">Add New Concert +</button>
         </div>
         <div class="editor-list">
           <h2>List of published concerts</h2>
           <div class="concerts-published" id="concerts-published">
             <!-- <div class="published-box" id="published-box">
-              <p class="time-published">21:30</p>
-              <p class="adress-published">Adress New, Berlin</p>
-              <p class="date-published">July 25. 2002</p>
-              <i class="fa-solid fa-trash"></i>
-              <i class="fa-solid fa-pen-to-square"></i>
-            </div> -->
+                <p class="time-published">21:30</p>
+                <p class="adress-published">Adress New, Berlin</p>
+                <p class="date-published">July 25. 2002</p>
+                <div class="icons-wrapper">
+                  <i class="fa-solid fa-trash"></i>
+                  <i class="fa-solid fa-pen-to-square"></i>  
+                </div>
+              </div> -->
           </div>
         </div>
       </div>
@@ -59,16 +59,8 @@
             <input type="text" name="time" id="time" placeholder="23:00" />
           </div>
           <div class="input-box">
-            <label for="month">Month</label>
-            <input type="text" name="month" id="month" placeholder="July" />
-          </div>
-          <div class="input-box">
-            <label for="day">Day</label>
-            <input type="text" name="day" id="day" placeholder="31." />
-          </div>
-          <div class="input-box">
-            <label for="year">Year</label>
-            <input type="text" name="year" id="year" placeholder="2023" />
+            <label for="date">Date</label>
+            <input type="text" name="date" id="datepickerTest" placeholder="Select date..." />
           </div>
           <div class="input-box">
             <label for="description">Description</label>
@@ -91,16 +83,8 @@
             <input type="text" name="time" id="time-edit" placeholder="23:00" />
           </div>
           <div class="input-box">
-            <label for="month">Month</label>
-            <input type="text" name="month" id="month-edit" placeholder="July" />
-          </div>
-          <div class="input-box">
-            <label for="day">Day</label>
-            <input type="text" name="day" id="day-edit" placeholder="31." />
-          </div>
-          <div class="input-box">
-            <label for="year">Year</label>
-            <input type="text" name="year" id="year-edit" placeholder="2023" />
+            <label for="date">Date</label>
+            <input type="text" name="date" id="datepickerTestEdit" placeholder="Select date..." />
           </div>
           <div class="input-box">
             <label for="description">Description</label>
@@ -146,5 +130,6 @@
 
     <script src="admin-editor.js" type="module"></script>
     <script src="script.js"></script>
+    <script src="https://unpkg.com/js-datepicker"></script>
   </body>
 </html>

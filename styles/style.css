@@ -718,13 +718,37 @@
   width: 100%;
   height: 100%;
   gap: 20px;
+  position: relative;
   overflow-y: auto;
   overflow-x: hidden;
   -ms-overflow-style: none;
   scrollbar-width: none;
+  z-index: 10;
 }
 .concert-wrapper .concerts-box::-webkit-scrollbar {
   display: none;
+}
+.concert-wrapper .concerts-box .arrow-div {
+  position: sticky;
+  cursor: pointer;
+  bottom: 15px;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  font-size: 22px;
+  color: #052b26;
+  z-index: 200;
+  width: 100%;
+}
+.concert-wrapper .concerts-box .arrow-div i {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 60px;
+  height: 60px;
+  background-color: white;
+  border-radius: 55px;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -2px rgba(0, 0, 0, 0.1);
 }
 .concert-wrapper .concerts-box .concert-card {
   display: flex;
@@ -743,13 +767,14 @@
   width: 100%;
   height: 100%;
 }
-.concert-wrapper .concerts-box .concert-card .concert-time-place .concert-time {
+.concert-wrapper .concerts-box .concert-card .concert-time-place .concert-date-new {
   width: -moz-fit-content;
   width: fit-content;
   color: #052b26;
-  font-weight: 500;
+  font-weight: 300;
+  font-style: italic;
   padding-bottom: 14px;
-  font-size: 18px;
+  font-size: 15px;
   border-bottom: 1px solid #052b26;
 }
 .concert-wrapper .concerts-box .concert-card .concert-time-place .concert-adress {
@@ -764,7 +789,7 @@
   color: #052b26;
   font-weight: 300;
 }
-.concert-wrapper .concerts-box .concert-card .concert-date {
+.concert-wrapper .concerts-box .concert-card .concert-time-new-box {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -773,32 +798,20 @@
   border-top-right-radius: 10px;
   border-bottom-right-radius: 10px;
   padding-inline: 50px;
-  padding-top: 20px;
-  gap: 10px;
   color: #ffffff;
   max-width: 220px;
   width: 100%;
   font-weight: 400;
   height: 100%;
 }
-.concert-wrapper .concerts-box .concert-card .concert-date .concert-day-month {
+.concert-wrapper .concerts-box .concert-card .concert-time-new-box .concert-time-new {
   font-family: "Bodoni Moda", "serif";
   font-weight: 400;
-  font-size: 30px;
+  font-size: 28px;
+  letter-spacing: 0.6px;
   overflow: hidden;
-  text-overflow: ellipsis;
-  white-space: nowrap;
+  text-align: center;
   max-width: 100%;
-}
-.concert-wrapper .concerts-box .concert-card .concert-date .concert-line-2 {
-  width: 60px;
-  height: 1px;
-  background-color: #ffffff;
-  margin-top: -6px;
-}
-.concert-wrapper .concerts-box .concert-card .concert-date .concert-year {
-  justify-self: flex-end;
-  font-size: 16px;
 }
 .concert-wrapper .concert-helper {
   width: 60%;
@@ -1024,6 +1037,13 @@
   color: white;
 }
 
+.line-clamp {
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 5;
+}
+
 .admin-editor {
   font-family: "Poppins", "sans-serif";
   display: flex;
@@ -1031,7 +1051,7 @@
   align-items: center;
   justify-content: center;
   width: 100%;
-  height: 100vh;
+  min-height: 100vh;
   gap: 20px;
   background-color: #052b26;
   padding: 20px;
@@ -1040,7 +1060,7 @@
   color: #ffffff;
   font-size: 30px;
   font-weight: 300;
-  margin-top: 30px;
+  margin-top: 10px;
   font-weight: 200;
 }
 .admin-editor .editor-wrapper {
@@ -1062,10 +1082,14 @@
 .admin-editor .editor-wrapper .editor-helper button {
   background-color: white;
   border: none;
-  border-radius: 4px;
+  border-radius: 12px;
   color: black;
   padding: 10px;
   cursor: pointer;
+}
+.admin-editor .editor-wrapper .editor-helper button:hover {
+  background-color: rgb(231, 239, 237);
+  transition: 0.3s;
 }
 .admin-editor .editor-wrapper .editor-list {
   display: flex;
@@ -1083,30 +1107,78 @@
 }
 .admin-editor .editor-wrapper .editor-list .concerts-published {
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin-inline: 15px;
-  max-width: 600px;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  max-width: 1440px;
+  margin: 0 auto;
+  padding-bottom: 40px;
   width: 100%;
   gap: 20px;
 }
 .admin-editor .editor-wrapper .editor-list .concerts-published .published-box {
   display: flex;
-  flex-direction: row;
-  gap: 15px;
+  flex-direction: column;
+  width: 300px;
+  gap: 14px;
   padding: 10px 20px;
   align-items: center;
   border-radius: 30px;
   border-radius: 10px;
   background-color: white;
 }
-.admin-editor .editor-wrapper .editor-list .concerts-published .published-box .fa-trash {
-  color: red;
+.admin-editor .editor-wrapper .editor-list .concerts-published .published-box:hover {
   cursor: pointer;
+  background-color: rgb(231, 239, 237);
+  outline: 2px solid black;
+  transition: 0.2s;
 }
-.admin-editor .editor-wrapper .editor-list .concerts-published .published-box .fa-pen-to-square {
+.admin-editor .editor-wrapper .editor-list .concerts-published .published-box .dateStyle {
+  font-weight: 500;
+  font-size: 18px;
+}
+.admin-editor .editor-wrapper .editor-list .concerts-published .published-box .addressStyle {
+  font-weight: 300;
+  font-size: 16px;
+}
+.admin-editor .editor-wrapper .editor-list .concerts-published .published-box .timeStyle {
+  font-weight: 300;
+  color: #052b26;
+  padding: 1.5px 10px;
+  border-radius: 12px;
+  font-size: 14px;
+  background-color: rgba(60, 88, 85, 0.285);
+  letter-spacing: 0.3px;
+}
+.admin-editor .editor-wrapper .editor-list .concerts-published .published-box .icons-wrapper {
+  display: flex;
+  flex-direction: row;
+  margin-top: auto;
+  gap: 8px;
+}
+.admin-editor .editor-wrapper .editor-list .concerts-published .published-box .icons-wrapper .fa-trash {
+  background-color: rgba(255, 0, 0, 0.22);
+  cursor: pointer;
+  padding: 5px 25px;
+  border-radius: 12px;
+  color: red;
+}
+.admin-editor .editor-wrapper .editor-list .concerts-published .published-box .icons-wrapper .fa-trash:hover {
+  background-color: red;
+  color: white;
+  transition: 0.3s;
+}
+.admin-editor .editor-wrapper .editor-list .concerts-published .published-box .icons-wrapper .fa-pen-to-square {
+  padding: 5px 25px;
+  background-color: rgba(0, 0, 255, 0.22);
+  border-radius: 12px;
   color: blue;
   cursor: pointer;
+}
+.admin-editor .editor-wrapper .editor-list .concerts-published .published-box .icons-wrapper .fa-pen-to-square:hover {
+  background-color: blue;
+  color: white;
+  transition: 0.3s;
 }
 .admin-editor .inputs-modal {
   display: none;
@@ -1115,6 +1187,9 @@
   align-items: center;
   justify-content: center;
   position: absolute;
+  min-height: 100vh;
+  overflow: auto;
+  padding-block: 40px;
   left: 0;
   top: 0;
   width: 100%;
@@ -1193,6 +1268,7 @@
   align-items: center;
   justify-content: center;
   position: absolute;
+  padding-block: 40px;
   left: 0;
   top: 0;
   width: 100%;
@@ -1741,11 +1817,12 @@ body {
     max-width: 400px;
     width: 100%;
   }
-  .concert-wrapper .concerts-box .concert-card .concert-time-place .concert-time {
+  .concert-wrapper .concerts-box .concert-card .concert-time-place .concert-date-new {
     width: -moz-fit-content;
     width: fit-content;
     color: #052b26;
-    font-weight: 500;
+    font-weight: 300;
+    font-style: italic;
     padding-bottom: 14px;
     font-size: 18px;
     border-bottom: 1px solid #052b26;
@@ -1756,7 +1833,7 @@ body {
     color: #052b26;
     font-weight: 300;
   }
-  .concert-wrapper .concerts-box .concert-card .concert-date {
+  .concert-wrapper .concerts-box .concert-card .concert-time-new-box {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -1773,20 +1850,10 @@ body {
     color: #ffffff;
     font-weight: 400;
   }
-  .concert-wrapper .concerts-box .concert-card .concert-date .concert-day-month {
+  .concert-wrapper .concerts-box .concert-card .concert-time-new-box .concert-time-new {
     font-family: "Bodoni Moda", "serif";
     font-weight: 400;
     font-size: 30px;
-  }
-  .concert-wrapper .concerts-box .concert-card .concert-date .concert-line-2 {
-    width: 60px;
-    height: 1px;
-    background-color: #ffffff;
-    margin-top: -6px;
-  }
-  .concert-wrapper .concerts-box .concert-card .concert-date .concert-year {
-    justify-self: flex-end;
-    font-size: 16px;
   }
   .contact {
     background-image: url("../assets/images/contact-img-sm.png");

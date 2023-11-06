@@ -25,18 +25,14 @@ const db = getDatabase();
 
 const address = document.getElementById("address");
 const time = document.getElementById("time");
-const month = document.getElementById("month");
-const day = document.getElementById("day");
-const year = document.getElementById("year");
 const description = document.getElementById("description");
 const uploadBtn = document.getElementById("uploadConcert");
 const concertsPublished = document.getElementById("concerts-published");
-
+const datepickerInput = document.getElementById("datepickerTest");
+let dateG;
 const addressEdit = document.getElementById("address-edit");
+const datepickerEdit = document.getElementById("datepickerTestEdit");
 const timeEdit = document.getElementById("time-edit");
-const monthEdit = document.getElementById("month-edit");
-const dayEdit = document.getElementById("day-edit");
-const yearEdit = document.getElementById("year-edit");
 const descriptionEdit = document.getElementById("description-edit");
 const uploadBtnEdit = document.getElementById("uploadConcertEdit");
 
@@ -44,15 +40,20 @@ const uid = function () {
   return Date.now().toString(36) + Math.random().toString(36).substr(2);
 };
 
+const dateTest = datepicker("#datepickerTest", {
+  onSelect: (date) => {
+    console.log(date.dateSelected.getTime());
+    dateG = date.dateSelected.getTime();
+  },
+});
+
 const insertData = () => {
   const myId = uid();
-  set(ref(db, "Concerts/" + myId), {
+  set(ref(db, "NewConcerts/Concerts/" + myId), {
     id: myId,
     address: address.value,
     time: time.value,
-    month: month.value,
-    day: day.value,
-    year: year.value,
+    date: dateG ? dateG : "",
     description: description.value,
   })
     .then(() => {
@@ -60,17 +61,24 @@ const insertData = () => {
       window.location.reload();
     })
     .catch(() => {
-      alert("Error occuerd");
+      alert("Error");
     });
 };
 
 uploadBtn.addEventListener("click", insertData);
 
+let brandNewTime;
+const editedDatePicker = datepicker("#datepickerTestEdit", {
+  onSelect: (date) => {
+    brandNewTime = new Date(date.dateSelected.getTime());
+  },
+});
+
 setTimeout(() => {
   for (let childBox of concertsPublished.children) {
     childBox.querySelector(".fa-trash").addEventListener("click", () => {
       let id = childBox.getAttribute("key");
-      remove(ref(db, "Concerts/" + id))
+      remove(ref(db, "NewConcerts/Concerts/" + id))
         .then(() => {
           window.location.reload();
         })
@@ -82,25 +90,24 @@ setTimeout(() => {
       let id = childBox.getAttribute("key");
       const dbref = ref(db);
 
-      get(child(dbref, "Concerts/" + id))
+      get(child(dbref, "NewConcerts/Concerts/" + id))
         .then((snapshot) => {
           if (snapshot.exists()) {
             addressEdit.value = snapshot.val().address;
             timeEdit.value = snapshot.val().time;
-            monthEdit.value = snapshot.val().month;
-            dayEdit.value = snapshot.val().day;
-            yearEdit.value = snapshot.val().year;
+            editedDatePicker.dateSelected = new Date(snapshot.val().date);
+            datepickerEdit.value = editedDatePicker.dateSelected.toDateString();
+            let dateEdit = editedDatePicker.dateSelected;
             descriptionEdit.value = snapshot.val().description;
+
             modalEdit.style.display = "flex";
+            concertsPublished.style.display = "none";
 
             uploadBtnEdit.addEventListener("click", () => {
-              console.log(id, addressEdit.value, timeEdit.value, monthEdit.value, dayEdit.value, yearEdit.value);
-              update(ref(db, "Concerts/" + id), {
+              update(ref(db, "NewConcerts/Concerts/" + id), {
                 address: addressEdit.value,
                 time: timeEdit.value,
-                month: monthEdit.value,
-                day: dayEdit.value,
-                year: yearEdit.value,
+                date: brandNewTime ? brandNewTime.getTime() : dateEdit.getTime(),
                 description: descriptionEdit.value,
               })
                 .then(() => {
@@ -127,19 +134,26 @@ const modalEdit = document.getElementById("modal-edit");
 const closeModalEdit = document.getElementById("close-modal-edit");
 
 addConcert.addEventListener("click", () => {
+  address.value = "";
+  time.value = "";
+  datepickerInput.value = "";
+  description.value = "";
   modal.style.display = "flex";
+  concertsPublished.style.display = "none";
 });
 
 closeModal.addEventListener("click", () => {
   modal.style.display = "none";
+  concertsPublished.style.display = "flex";
 });
 
 closeModalEdit.addEventListener("click", () => {
   modalEdit.style.display = "none";
+  concertsPublished.style.display = "flex";
 });
 
 const listConcerts = async () => {
-  const res = await axios.get("https://jovanastosicviolin-18273-default-rtdb.europe-west1.firebasedatabase.app/Concerts.json");
+  const res = await axios.get("https://jovanastosicviolin-18273-default-rtdb.europe-west1.firebasedatabase.app/NewConcerts/Concerts.json");
   const data = await res.data;
   let concertsArray = [];
 
@@ -149,20 +163,26 @@ const listConcerts = async () => {
     }
   }
 
-  concertsArray = concertsArray.reverse();
+  concertsArray = concertsArray.sort((a, b) => b.date - a.date);
   concertsPublished.innerHTML = "";
   concertsArray.forEach((d, i) => {
     let publishedBox = document.createElement("div");
     publishedBox.classList.add("published-box");
     let timeP = document.createElement("p");
+    timeP.classList.add("timeStyle");
     let addressP = document.createElement("p");
+    addressP.classList.add("line-clamp");
+    addressP.classList.add("addressStyle");
     let dateP = document.createElement("p");
+    dateP.classList.add("dateStyle");
 
     publishedBox.setAttribute("key", d.id);
-    timeP.innerHTML += d.time;
+    timeP.innerHTML += d.time + "h";
     addressP.innerHTML += d.address;
-    dateP.innerHTML += `${d.day} ${d.month} ${d.year}`;
+    dateP.innerHTML += `${formatDate(d.date, { month: "short", day: "2-digit", year: "numeric" })}`;
 
+    let iconsWrapper = document.createElement("div");
+    iconsWrapper.classList.add("icons-wrapper");
     let edit = document.createElement("i");
     edit.classList.add("fa-solid");
     edit.classList.add("fa-pen-to-square");
@@ -172,11 +192,24 @@ const listConcerts = async () => {
 
     concertsPublished.appendChild(publishedBox);
     publishedBox.appendChild(timeP);
-    publishedBox.appendChild(addressP);
     publishedBox.appendChild(dateP);
-    publishedBox.appendChild(edit);
-    publishedBox.appendChild(trash);
+    publishedBox.appendChild(addressP);
+    publishedBox.appendChild(iconsWrapper);
+    iconsWrapper.append(edit);
+    iconsWrapper.appendChild(trash);
   });
 };
 
 listConcerts();
+
+// value: string,
+//   formatting: {
+//     month: "numeric" | "2-digit" | "long" | "short" | "narrow" | undefined;
+//     day: "numeric" | "2-digit" | undefined;
+//     year: "numeric" | "2-digit" | undefined;
+//   }
+
+const formatDate = (value, formatting) => {
+  if (!value) return value;
+  return new Intl.DateTimeFormat("en-US", formatting).format(new Date(value));
+};

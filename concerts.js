@@ -1,9 +1,9 @@
 const concertsBox = document.querySelector("#concerts-box");
 
 const listConcertsPublic = async () => {
-  const res = await axios.get("https://jovanastosicviolin-18273-default-rtdb.europe-west1.firebasedatabase.app/Concerts.json");
+  const res = await axios.get("https://jovanastosicviolin-18273-default-rtdb.europe-west1.firebasedatabase.app/NewConcerts/Concerts.json");
   const data = await res.data;
-  const concertsArray = [];
+  let concertsArray = [];
 
   if (data) {
     for (let obj in data) {
@@ -12,14 +12,14 @@ const listConcertsPublic = async () => {
   }
 
   concertsBox.innerHTML = "";
-  concertsArray.reverse();
+  concertsArray = concertsArray.sort((a, b) => b.date - a.date);
   concertsArray.forEach((d) => {
     let concertCard = document.createElement("div");
     concertCard.classList.add("concert-card");
     let concertTimePlace = document.createElement("div");
     concertTimePlace.classList.add("concert-time-place");
-    let concertTime = document.createElement("p");
-    concertTime.classList.add("concert-time");
+    let concertDate = document.createElement("p");
+    concertDate.classList.add("concert-date-new");
     let concertLine1 = document.createElement("div");
     concertLine1.classList.add("concert-line-1");
     let concertAdress = document.createElement("p");
@@ -27,32 +27,47 @@ const listConcertsPublic = async () => {
     let concertDescription = document.createElement("p");
     concertDescription.classList.add("concert-description");
 
-    let concertDate = document.createElement("div");
-    concertDate.classList.add("concert-date");
-    let concertDayMonth = document.createElement("p");
-    concertDayMonth.classList.add("concert-day-month");
-    let concertLine2 = document.createElement("div");
-    concertLine2.classList.add("concert-line-2");
-    let concertYear = document.createElement("p");
-    concertYear.classList.add("concert-year");
+    let concertTimeNewBox = document.createElement("div");
+    concertTimeNewBox.classList.add("concert-time-new-box");
+    let concertTime = document.createElement("p");
+    concertTime.classList.add("concert-time-new");
 
-    concertTime.innerHTML += d.time;
+    concertDate.innerHTML += `${formatDate(d.date, { month: "short", day: "2-digit", year: "numeric" })}`;
     concertAdress.innerHTML += d.address;
-    concertDayMonth.innerHTML += `${d.day} ${d.month}`;
-    concertYear.innerHTML += `${d.year}`;
+    concertTime.innerHTML += d.time + "h";
     concertDescription.innerHTML += `${d.description}`;
 
     concertsBox.appendChild(concertCard);
     concertCard.appendChild(concertTimePlace);
-    concertTimePlace.appendChild(concertTime);
+    concertTimePlace.appendChild(concertDate);
     concertTimePlace.appendChild(concertLine1);
     concertTimePlace.appendChild(concertAdress);
     concertTimePlace.appendChild(concertDescription);
-    concertCard.appendChild(concertDate);
-    concertDate.appendChild(concertDayMonth);
-    concertDate.appendChild(concertLine2);
-    concertDate.appendChild(concertYear);
+    concertCard.appendChild(concertTimeNewBox);
+    concertTimeNewBox.appendChild(concertTime);
+  });
+
+  let arrowDownDiv = document.createElement("div");
+  arrowDownDiv.classList.add("arrow-div");
+  let arrowDown = document.createElement("i");
+  arrowDown.classList.add("fa-solid");
+  arrowDown.classList.add("fa-arrow-down");
+
+  concertsBox.appendChild(arrowDownDiv);
+  arrowDownDiv.appendChild(arrowDown);
+
+  arrowDown.addEventListener("click", () => {
+    // concertsBox.scrollTop = concertsBox.scrollTop + 200;
+    if (concertsBox.scrollHeight == concertsBox.scrollTop) {
+      console.log("kraj");
+    }
+    concertsBox.scrollTo({ top: concertsBox.scrollTop + 200, behavior: "smooth" });
   });
 };
 
 listConcertsPublic();
+
+const formatDate = (value, formatting) => {
+  if (!value) return value;
+  return new Intl.DateTimeFormat("en-US", formatting).format(new Date(value));
+};
